@@ -101,6 +101,10 @@ For these clusters, you will require:
     </p>
 14. Check the entered information in the review page, then select `Create cluster`.
 
+## Ticker Plant (TP) Cluster
+
+1. TODO
+
 ## Real-Time Database (RDB) Cluster
 
 1. Set the cluster type to “RDB".

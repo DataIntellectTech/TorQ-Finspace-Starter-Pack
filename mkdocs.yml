@@ -10,8 +10,8 @@ nav:
     - Cluster Creation : 07-clustercreation.md
     - Create EC2 : 08-createec2.md
     - Cluster Connection String : 09-clusterconnectionstring.md
-    - Setup QPad : 10-setupqpad.md
-    - Connecting Using QPad : 11-connectingusingqpad.md
+    - Setup qStudio : 10-setupqStudio.md
+    - Connecting Using qStudio : 11-connectingusingqStudio.md
     - Running Queries : 12-runningqueries.md
     - Health Check : 13-healthcheck.md
     - Taking it Down : 14-takingitdown.md
