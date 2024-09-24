@@ -218,7 +218,7 @@ Normally, you should be able to take down your entire stack by running `terrafor
 
 For more in-depth information and documentation, explore the following resources:
 
-- [Terraform Documentation](https://learn.hashicorp.com/tutorials/terraform/)
+- [Terraform Documentation](https://developer.hashicorp.com/terraform/tutorials)
 - [AWS Documentation](https://docs.aws.amazon.com/)
 
 These resources provide detailed information about Terraform and AWS services, best practices, and advanced configurations.
