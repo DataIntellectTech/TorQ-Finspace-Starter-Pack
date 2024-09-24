@@ -117,7 +117,7 @@ For these clusters, you will require:
 4. Select `Run on kdb scaling group` for the Cluster running option.
    
     <p style="text-align: center">
-        <img src="workshop/graphics/discovery_cluster_running.png" alt="RDB Cluster Running" width="90%"/>
+        <img src="workshop/graphics/discovery_cluster_running.png" alt="TP Cluster Running" width="90%"/>
     </p>
 
 5. Choose your group in the dropdown in the `Kdb scaling group details` section.
@@ -133,7 +133,7 @@ For these clusters, you will require:
 8. Leave Tags as empty and select `Next` to go to the next page.
 
     <p style="text-align: center">
-        <img src="workshop/graphics/rdb_node_details.png" alt="RDB Node Details" width="90%"/>
+        <img src="workshop/graphics/rdb_node_details.png" alt="TP Node Details" width="90%"/>
     </p>
 
 9. Select `Browse S3`, search and select your codebucket and select your code.zip file.
