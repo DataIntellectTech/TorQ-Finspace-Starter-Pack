@@ -439,7 +439,7 @@ Ensure that the RDB cluster is in a `Running` state before creating the Feed clu
 When all clusters are up it should look like this:
 
 <p style="text-align: center">
-    <img src="graphics/clusters-running.png" alt="All Clusters Running" width="90%"/>
+    <img src="../graphics/clusters-running.png" alt="All Clusters Running" width="90%"/>
 </p>
 
 ## Errors in cluster creation
