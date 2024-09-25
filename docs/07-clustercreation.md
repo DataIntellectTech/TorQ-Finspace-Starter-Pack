@@ -156,7 +156,7 @@ For these clusters, you will require:
 
 12. Select `Next` to go to the next page.
 
-13. Select your previously created [VPC ID](https://docs.aws.amazon.com/vpc/latest/userguide/create-vpc.html), [Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/create-subnets.html), and Security Groups (we can use the readilty available default), then select `Next` to go to the next page.
+13. Select your previously created [VPC ID](https://docs.aws.amazon.com/vpc/latest/userguide/create-vpc.html), [Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/create-subnets.html), and Security Groups (we can use the readily available default), then select `Next` to go to the next page.
 
 14. Select your volume, then select `Next` to go to the next page.
 
@@ -221,7 +221,7 @@ For these clusters, you will require:
 
 12. Select `Next` to go to the next page.
 
-13. Select your previously created [VPC ID](https://docs.aws.amazon.com/vpc/latest/userguide/create-vpc.html), [Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/create-subnets.html), and Security Groups (we can use the readilty available default), then select `Next` to go to the next page.
+13. Select your previously created [VPC ID](https://docs.aws.amazon.com/vpc/latest/userguide/create-vpc.html), [Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/create-subnets.html), and Security Groups (we can use the readily available default), then select `Next` to go to the next page.
 
 14. In the `Savedown database configuration` section, select your database in the `Database name` dropdown menu.
 
@@ -293,7 +293,7 @@ For these clusters, you will require:
 
 12. Select `Next` to go to the next page.
 
-13. Select your previously created [VPC ID](https://docs.aws.amazon.com/vpc/latest/userguide/create-vpc.html), [Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/create-subnets.html), and Security Groups (we can use the readilty available default), then select `Next` to go to the next page.
+13. Select your previously created [VPC ID](https://docs.aws.amazon.com/vpc/latest/userguide/create-vpc.html), [Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/create-subnets.html), and Security Groups (we can use the readily available default), then select `Next` to go to the next page.
 
 14. For `Database name`, select your database from the dropdown menu.
 
@@ -364,7 +364,7 @@ Ensure that the Discovery cluster is in a "Running" state before creating the Ga
 
 12. Select `Next` to go to the next page.
 
-13. Select your previously created [VPC ID](https://docs.aws.amazon.com/vpc/latest/userguide/create-vpc.html), [Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/create-subnets.html), and Security Groups (we can use the readilty available default), then select `Next` to go to the next page.
+13. Select your previously created [VPC ID](https://docs.aws.amazon.com/vpc/latest/userguide/create-vpc.html), [Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/create-subnets.html), and Security Groups (we can use the readily available default), then select `Next` to go to the next page.
 
 14. This page had no editing options. Select `Next` to go to the next page.
 
@@ -424,7 +424,7 @@ Ensure that the RDB cluster is in a `Running` state before creating the Feed clu
 
 11. Select `Next` to go to the next page.
 
-12. Select your previously created [VPC ID](https://docs.aws.amazon.com/vpc/latest/userguide/create-vpc.html), [Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/create-subnets.html), and Security Groups (we can use the readilty available default), then select `Next` to go to the next page.
+12. Select your previously created [VPC ID](https://docs.aws.amazon.com/vpc/latest/userguide/create-vpc.html), [Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/create-subnets.html), and Security Groups (we can use the readily available default), then select `Next` to go to the next page.
 
 13. Leave everything as blank and click `Next` to move on to the next page.
 
