@@ -10,10 +10,10 @@ Creating Kx Managed Insight Scaling Groups, Shared Volumes, and AWS Finspace Dat
 To create a scaling group through the AWS Console, select your kdb environment and navigate to the `Kdb scaling groups` tab:
 
 <p style="text-align: center">
-    <img src="workshop/graphics/kdbenv.png" alt="Select kdb env" width="90%"/>
+    <img src="../workshop/graphics/kdbenv.png" alt="Select kdb env" width="90%"/>
 </p>
 <p style="text-align: center">
-    <img src="workshop/graphics/scalinggroups_tab.png" alt="Scaling Group Tab" width="90%"/>
+    <img src="./workshop/graphics/scalinggroups_tab.png" alt="Scaling Group Tab" width="90%"/>
 </p>
 
 Click the `Create kdb scaling group` button
