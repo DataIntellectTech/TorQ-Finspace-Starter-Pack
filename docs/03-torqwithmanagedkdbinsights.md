@@ -5,14 +5,16 @@ When porting TorQ to AWS we chose to make a minimum viable product and then buil
 
 - Discovery: Processes use the discovery service to register their own availability, find other processes (by process type), and subscribe to receive updates for new process availability (by process type). The discovery service does not manage connections - it simply returns tables of registered processes, irrespective of their current availability. It is up to each individual process to manage its own connections.
 
+- Ticker Plant: The TP recieves data, either from a feed handler or directly from a source, and published that data to it's subscribers, usually either an RDB, or another client process. TP subscribers have the option to subscribe to all data, or just a subset of data.
+    - Currently we use a type of TP called an STP (Segmented Ticker Plant) which allows us the option to use not only trigger EOD (End Of Day) but also EOP (End of Period) if needed.
 
 - Historical Database: The HDB holds data from before the current day. It is read only and used for querying all historical data. Data is stored in date partitions and can be queried through the gateway process. Note: The HDB is unqueriable for around 5 minutes during EOD (End Of Day) processing.
 
 - Real-time Database: The RDB subscribes and captures all data from the feed handler throughout the current day and store it in memory for query or real-time processing.
 
-- Feed Handler: The feed handler acts as a preparation stage for the data, transforming the data into kdb+ format and writing it to our RDB.
-
 - Gateway: The gateway acts as a single interface point that separates the end user from the configuration of underlying databases. You don't need to know where data is stored, and you don't need to make multiple requests to retrieve it. It can access a single process, or join data across multiple processes. It also does load balancing and implements a level of resilience by hiding back-end process failure from clients.
+
+- Feed Handler: The feed handler acts as a preparation stage for the data, transforming the data into kdb+ format and sending it on to our TP.
 
 These features allow us to store real-time and historical data and make it available to users.
 

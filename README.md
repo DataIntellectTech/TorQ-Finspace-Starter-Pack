@@ -1,7 +1,7 @@
 # TorQ-Amazon-FinSpace-Starter-Pack
 An example market data capture system designed for running in AWS Managed kdb Insights.
 
-This codebase contains
+This codebase contains:
 
 * Useful scripts for interacting with Managed kdb Insights - ./scripts directory
 * Initial code for a "TorQ for Amazon FinSpace with Managed kdb Insights" application

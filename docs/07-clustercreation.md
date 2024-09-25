@@ -34,7 +34,7 @@ For these clusters, you will require:
 2. Choose a name for your cluster.
     - **Note:** This name must match your process name (`procname`) added during the next stage of cluster creation - This is due to process connections requiring the cluster name, which is not visible from within the process, but `procname` is. **Our suggestion is to use the process type** (`proctype`) **with a number**, e.g. `discovery1`.
 
-3. Select the execution role for the [IAM user previously created](https://catalog.us-east-1.prod.workshops.aws/workshops/a1575309-1f43-4945-a5fa-a4d62d5e821d/en-US/rolesetup). The user for all 5 clusters should be the same. This is so that each cluster has the correct permissions.
+3. Select the execution role for the [IAM user previously created](https://catalog.us-east-1.prod.workshops.aws/workshops/a1575309-1f43-4945-a5fa-a4d62d5e821d/en-US/rolesetup). The user for all 6 clusters should be the same. This is so that each cluster has the correct permissions.
 
     <p style="text-align: center">
         <img src="workshop/graphics/discovery_cluster_details.png" alt="Discovery Cluster Details" width="90%"/>
@@ -101,6 +101,71 @@ For these clusters, you will require:
     </p>
 14. Check the entered information in the review page, then select `Create cluster`.
 
+## Ticker Plant (TP) Cluster
+
+1. Set the cluster type to "Tickerplant".
+
+2. Choose a name for your cluster.
+    - **Note:** This name must match your process name, `procname`, added during the next stage of cluster creation - This is due to process connections requiring the cluster name, which is not visible from within the process, but procname is. **Our suggestion is to use the process type** (`proctype`) **with a number** e.g. `tp1`.
+
+    <p style="text-align: center">
+        <img src="workshop/graphics/tp_cluster_details.png" alt="TP Cluster Details" width="90%"/>
+    </p>
+
+3. Select the execution role for the [IAM user previously created](https://catalog.us-east-1.prod.workshops.aws/workshops/a1575309-1f43-4945-a5fa-a4d62d5e821d/en-US/rolesetup). The user for all 6 clusters should be the same. This is so that each cluster has the correct permissions.
+
+4. Select `Run on kdb scaling group` for the Cluster running option.
+   
+    <p style="text-align: center">
+        <img src="workshop/graphics/discovery_cluster_running.png" alt="TP Cluster Running" width="90%"/>
+    </p>
+
+5. Choose your group in the dropdown in the `Kdb scaling group details` section.
+
+    <p style="text-align: center">
+        <img src="workshop/graphics/kdb_scaling_group_details.png" alt="Kdb Scaling Group Details" width="90%"/>
+    </p>
+
+6. Enter a node count of "1". This will be the number of instances in a cluster. For the MVP only 1 is needed.
+
+7. Set `Memory reservation per node` to the minimum value (6 MiB).
+
+8. Leave Tags as empty and select `Next` to go to the next page.
+
+    <p style="text-align: center">
+        <img src="workshop/graphics/rdb_node_details.png" alt="TP Node Details" width="90%"/>
+    </p>
+
+9. Select `Browse S3`, search and select your codebucket and select your code.zip file.
+    - Alternatively, you can copy the URL from the codebucket itself.
+
+10. Enter `TorQ-Amazon-FinSpace-Starter-Pack/env.q` as your initialization script.
+
+11. Select `Add command-line argument` twice and enter the keys and values in the below table:
+
+    | Key      | Value |
+    | -------- | ----- |
+    | proctype | segmentedtickerplant   |
+    | procname | tp1  |
+
+    This specified initialization script and the command line arguments will set up the necessary environment for your cluster.
+
+    <p style="text-align: center">
+        <img src="workshop/graphics/tp_add_code.png" alt="TP Add Code" width="90%"/>
+    </p>
+
+12. Select `Next` to go to the next page.
+
+13. Select your previously created [VPC ID](https://docs.aws.amazon.com/vpc/latest/userguide/create-vpc.html), [Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/create-subnets.html), and Security Groups (we can use the readily available default), then select `Next` to go to the next page.
+
+14. Select your volume, then select `Next` to go to the next page.
+
+    <p style="text-align: center">
+        <img src="workshop/graphics/tp_log.png" alt="Add volume" width="90%"/>
+    </p>
+
+15. Check the entered information in the review page, then select `Create cluster`.
+
 ## Real-Time Database (RDB) Cluster
 
 1. Set the cluster type to “RDB".
@@ -112,7 +177,7 @@ For these clusters, you will require:
         <img src="workshop/graphics/rdb_cluster_details.png" alt="RDB Cluster Details" width="90%"/>
     </p>
 
-3. Select the execution role for the [IAM user previously created](https://catalog.us-east-1.prod.workshops.aws/workshops/a1575309-1f43-4945-a5fa-a4d62d5e821d/en-US/rolesetup). The user for all 5 clusters should be the same. This is so that each cluster has the correct permissions.
+3. Select the execution role for the [IAM user previously created](https://catalog.us-east-1.prod.workshops.aws/workshops/a1575309-1f43-4945-a5fa-a4d62d5e821d/en-US/rolesetup). The user for all 6 clusters should be the same. This is so that each cluster has the correct permissions.
 
 4. Select `Run on kdb scaling group` for the Cluster running option.
    
@@ -156,19 +221,22 @@ For these clusters, you will require:
 
 12. Select `Next` to go to the next page.
 
-13. Select your previously created [VPC ID](https://docs.aws.amazon.com/vpc/latest/userguide/create-vpc.html), [Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/create-subnets.html), and Security Groups (we can use the readilty available default), then select `Next` to go to the next page.
+13. Select your previously created [VPC ID](https://docs.aws.amazon.com/vpc/latest/userguide/create-vpc.html), [Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/create-subnets.html), and Security Groups (we can use the readily available default), then select `Next` to go to the next page.
 
 14. In the `Savedown database configuration` section, select your database in the `Database name` dropdown menu.
 
 15. In the `Savedown storage configuration - optional` section, select your volume in the `Volume name - optional` dropdown menu.
 
-16. Select `Next` to go to the next page.
+16. In the `Tickerplant log configuration - optional` section, select your volume here too from the dropdown menu.
+    - This will allow your RDB access to the TP logs for recovery.
+
+17. Select `Next` to go to the next page.
 
     <p style="text-align: center">
         <img src="workshop/graphics/rdb_config_options.png" alt="RDB Config Options" width="90%"/>
     </p>
 
-17. Check the entered information in the review page, then select `Create cluster`.
+18. Check the entered information in the review page, then select `Create cluster`.
 
 ## Historical Database (HDB) Cluster
 
@@ -181,7 +249,7 @@ For these clusters, you will require:
         <img src="workshop/graphics/hdb_cluster_details.png" alt="HDB Cluster Details" width="90%"/>
     </p>
 
-3. Select the execution role for the [IAM user previously created](https://catalog.us-east-1.prod.workshops.aws/workshops/a1575309-1f43-4945-a5fa-a4d62d5e821d/en-US/rolesetup). The user for all 5 clusters should be the same. This is so that each cluster has the correct permissions.
+3. Select the execution role for the [IAM user previously created](https://catalog.us-east-1.prod.workshops.aws/workshops/a1575309-1f43-4945-a5fa-a4d62d5e821d/en-US/rolesetup). The user for all 6 clusters should be the same. This is so that each cluster has the correct permissions.
 
 4. Select `Run on kdb scaling group` for the Cluster running option.
    
@@ -225,7 +293,7 @@ For these clusters, you will require:
 
 12. Select `Next` to go to the next page.
 
-13. Select your previously created [VPC ID](https://docs.aws.amazon.com/vpc/latest/userguide/create-vpc.html), [Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/create-subnets.html), and Security Groups (we can use the readilty available default), then select `Next` to go to the next page.
+13. Select your previously created [VPC ID](https://docs.aws.amazon.com/vpc/latest/userguide/create-vpc.html), [Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/create-subnets.html), and Security Groups (we can use the readily available default), then select `Next` to go to the next page.
 
 14. For `Database name`, select your database from the dropdown menu.
 
@@ -252,7 +320,7 @@ Ensure that the Discovery cluster is in a "Running" state before creating the Ga
         <img src="workshop/graphics/gw_cluster_details.png" alt="Gateway Cluster Details" width="90%"/>
     </p>
 
-3. Select the execution role for the [IAM user previously created](https://catalog.us-east-1.prod.workshops.aws/workshops/a1575309-1f43-4945-a5fa-a4d62d5e821d/en-US/rolesetup). The user for all 5 clusters should be the same. This is so that each cluster has the correct permissions.
+3. Select the execution role for the [IAM user previously created](https://catalog.us-east-1.prod.workshops.aws/workshops/a1575309-1f43-4945-a5fa-a4d62d5e821d/en-US/rolesetup). The user for all 6 clusters should be the same. This is so that each cluster has the correct permissions.
 
 4. Select `Run on kdb scaling group` for the Cluster running option.
    
@@ -296,7 +364,7 @@ Ensure that the Discovery cluster is in a "Running" state before creating the Ga
 
 12. Select `Next` to go to the next page.
 
-13. Select your previously created [VPC ID](https://docs.aws.amazon.com/vpc/latest/userguide/create-vpc.html), [Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/create-subnets.html), and Security Groups (we can use the readilty available default), then select `Next` to go to the next page.
+13. Select your previously created [VPC ID](https://docs.aws.amazon.com/vpc/latest/userguide/create-vpc.html), [Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/create-subnets.html), and Security Groups (we can use the readily available default), then select `Next` to go to the next page.
 
 14. This page had no editing options. Select `Next` to go to the next page.
 
@@ -314,7 +382,7 @@ Ensure that the RDB cluster is in a `Running` state before creating the Feed clu
         <img src="workshop/graphics/feed_cluster_details.png" alt="Feed Cluster Details" width="90%"/>
     </p>
 
-3. Select the execution role for the [IAM user previously created](https://catalog.us-east-1.prod.workshops.aws/workshops/a1575309-1f43-4945-a5fa-a4d62d5e821d/en-US/rolesetup). The user for all 5 clusters should be the same. This is so that each cluster has the correct permissions.
+3. Select the execution role for the [IAM user previously created](https://catalog.us-east-1.prod.workshops.aws/workshops/a1575309-1f43-4945-a5fa-a4d62d5e821d/en-US/rolesetup). The user for all 6 clusters should be the same. This is so that each cluster has the correct permissions.
 
 4. Select `Run on kdb scaling group` for the Cluster running option.
    
@@ -356,7 +424,7 @@ Ensure that the RDB cluster is in a `Running` state before creating the Feed clu
 
 11. Select `Next` to go to the next page.
 
-12. Select your previously created [VPC ID](https://docs.aws.amazon.com/vpc/latest/userguide/create-vpc.html), [Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/create-subnets.html), and Security Groups (we can use the readilty available default), then select `Next` to go to the next page.
+12. Select your previously created [VPC ID](https://docs.aws.amazon.com/vpc/latest/userguide/create-vpc.html), [Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/create-subnets.html), and Security Groups (we can use the readily available default), then select `Next` to go to the next page.
 
 13. Leave everything as blank and click `Next` to move on to the next page.
 
