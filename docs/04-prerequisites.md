@@ -41,13 +41,13 @@ Choose the same AWS Region as your AWS Finspace KxEnvirnment
 Give your bucket a name
 
 <p style="text-align: center">
-    <img src="workshop/graphics/S3_general_configuration.png" alt="S3 general configurations" width="90%"/>
+    <img src="../workshop/graphics/S3_general_configuration.png" alt="S3 general configurations" width="90%"/>
 </p>
 
 Unselect the `Block all public access` box
 
 <p style="text-align: center">
-    <img src="workshop/graphics/S3_access_settings.png" alt="S3 Access Settings" width="90%"/>
+    <img src="../workshop/graphics/S3_access_settings.png" alt="S3 Access Settings" width="90%"/>
 </p>
 
 Leave all other settings as the default
@@ -57,7 +57,7 @@ Leave all other settings as the default
 Copy the ARN of your S3 buckets in the console by navigating to your S3 bucket, selecting `Properties`
 
 <p style="text-align: center">
-    <img src="workshop/graphics/S3_code_bucket_arn.png" alt="S3 Bucket Arn" width="90%"/>
+    <img src="../workshop/graphics/S3_code_bucket_arn.png" alt="S3 Bucket Arn" width="90%"/>
 </p>
 
 Edit the Access policy of both S3 buckets with the JSON document:

@@ -90,13 +90,13 @@ Your Trust relationship should have at least these:
 In your kdb environment, go to the `Users` tab and select `Add user`.
 
 <p style="text-align: center">
-    <img src="workshop/graphics/create_user_button.png" alt="Create user button" width="90%"/>
+    <img src="../workshop/graphics/create_user_button.png" alt="Create user button" width="90%"/>
 </p>
 
 Give it a name and select the `IAM role` you created above.
 
 <p style="text-align: center">
-    <img src="workshop/graphics/create_user.png" alt="Add user" width="90%"/>
+    <img src="../workshop/graphics/create_user.png" alt="Add user" width="90%"/>
 </p>
 
 ## Generate Connection String
@@ -104,13 +104,13 @@ Give it a name and select the `IAM role` you created above.
 On the `Users` tab, copy the links for `IAM role` and `User ARN` for the user.
 
 <p style="text-align: center">
-    <img src="workshop/graphics/user_details.png" alt="User details" width="90%"/>
+    <img src="../workshop/graphics/user_details.png" alt="User details" width="90%"/>
 </p>
 
 Navigate to `CloudShell`.
 
 <p style="text-align: center">
-    <img src="workshop/graphics/cloudshell.png" alt="Navigate to CloudShell" width="90%"/>
+    <img src="../workshop/graphics/cloudshell.png" alt="Navigate to CloudShell" width="90%"/>
 </p>
 
 Replace `<ARN_COPIED_FROM_ABOVE>` with the `IAM Role` copied above and run the following (this will not return anything):
@@ -127,7 +127,7 @@ This lets you assume the role that you have just created by taking the values re
 Copy your kdb Environment ID:
 
 <p style="text-align: center">
-    <img src="workshop/graphics/kdbenv_id.png" alt="Get you kdb env ID" width="90%"/>
+    <img src="../workshop/graphics/kdbenv_id.png" alt="Get you kdb env ID" width="90%"/>
 </p>
 
 Replace `<YOUR_KDB_ENVIRONMENT_ID>` with your kdb environment ID, `<USER_ARN_COPIED_ABOVE>` with the `User ARN`, and `<NAME_OF_CLUSTER>` with the name of the cluster you want to connect to. Run the following:
@@ -137,5 +137,5 @@ Replace `<YOUR_KDB_ENVIRONMENT_ID>` with your kdb environment ID, `<USER_ARN_COP
 This will return a large connection string which can be used to connect to your cluster.
 
 <p style="text-align: center">
-    <img src="workshop/graphics/connection_string.png" alt="Connection string example" width="90%"/>
+    <img src="../workshop/graphics/connection_string.png" alt="Connection string example" width="90%"/>
 </p>

@@ -8,13 +8,13 @@ For queries to be ran through the gateway, we must update some preferences on qS
 We will need to uncheck the box labelled `Wrap query sent to server`.
 
 <p style="text-align: center">
-    <img src="workshop/graphics/Preferences2.png" alt="Preferences" width="90%"/>
+    <img src="../workshop/graphics/Preferences2.png" alt="Preferences" width="90%"/>
 </p>
 
 The queries below should then all run successfully!
 
 <p style="text-align: center">
-    <img src="workshop/graphics/RunningQueries.png" alt="qStudio Queries" width="90%"/>
+    <img src="../workshop/graphics/RunningQueries.png" alt="qStudio Queries" width="90%"/>
 </p>
 
 Example queries are listed below:

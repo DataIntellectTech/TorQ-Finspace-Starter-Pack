@@ -10,10 +10,10 @@ Creating Kx Managed Insight Scaling Groups, Shared Volumes, and AWS Finspace Dat
 To create a scaling group through the AWS Console, select your kdb environment and navigate to the `Kdb scaling groups` tab:
 
 <p style="text-align: center">
-    <img src="workshop/graphics/kdbenv.png" alt="Select kdb env" width="90%"/>
+    <img src="../workshop/graphics/kdbenv.png" alt="Select kdb env" width="90%"/>
 </p>
 <p style="text-align: center">
-    <img src="workshop/graphics/scalinggroups_tab.png" alt="Scaling Group Tab" width="90%"/>
+    <img src="../workshop/graphics/scalinggroups_tab.png" alt="Scaling Group Tab" width="90%"/>
 </p>
 
 Click the `Create kdb scaling group` button
@@ -23,7 +23,7 @@ Click the `Create kdb scaling group` button
 3. Click the `Create kdb scaling group` button when you are happy with the settings.
 
 <p style="text-align: center">
-    <img src="workshop/graphics/Create_kdb_scaling_group.png" alt="Scaling Group Settings" width="90%"/>
+    <img src="../workshop/graphics/Create_kdb_scaling_group.png" alt="Scaling Group Settings" width="90%"/>
 </p>
 
 ## Shared Volume
@@ -31,7 +31,7 @@ Click the `Create kdb scaling group` button
 To create a shared volume through the AWS Console, select your kdb environment and navigate to the `Volumes` tab:
 
 <p style="text-align: center">
-    <img src="workshop/graphics/volumes_tab.png" alt="Volumes Tab" width="90%"/>
+    <img src="../workshop/graphics/volumes_tab.png" alt="Volumes Tab" width="90%"/>
 </p>
 
 Click the `Create volume` button
@@ -42,14 +42,14 @@ Click the `Create volume` button
     - The size of allocated disk space must be at least 1200 GiB.
 
 <p style="text-align: center">
-    <img src="workshop/graphics/Create_shared_volume_pt1.png" alt="Volume Settings" width="90%"/>
+    <img src="../workshop/graphics/Create_shared_volume_pt1.png" alt="Volume Settings" width="90%"/>
 </p>
 
 1. Choose an Availability Zone. It is recommended that it matches with the Availability Zone you assigned the kdb scaling group to run on
 2. Click the `Create volume` button when you are happy with the settings
 
 <p style="text-align: center">
-    <img src="workshop/graphics/Create_shared_volume_pt2.png" alt="Volume AZ Settings" width="90%"/>
+    <img src="../workshop/graphics/Create_shared_volume_pt2.png" alt="Volume AZ Settings" width="90%"/>
 </p>
 
 ## (Optional) Dataview 
@@ -61,7 +61,7 @@ If you plan to run your HDB cluster on a scaling group this step is required. Ot
 To create a scaling group through the AWS Console, select your kdb environment and navigate to the `Databases` tab:
 
 <p style="text-align: center">
-    <img src="workshop/graphics/database_tab.png" alt="Database tab" width="90%"/>
+    <img src="../workshop/graphics/database_tab.png" alt="Database tab" width="90%"/>
 </p>
 
 Select the database that has the changesets appropriate for your use case.
@@ -70,14 +70,14 @@ To learn more about changesets click [this link](https://docs.aws.amazon.com/fin
 1. Navigate to the `Dataview` tab and click the `Create dataview` button
 
 <p style="text-align: center">
-    <img src="workshop/graphics/Create_dataview_pt0.png" alt="Dataview tab" width="90%"/>
+    <img src="../workshop/graphics/Create_dataview_pt0.png" alt="Dataview tab" width="90%"/>
 </p>
 
 1. Under `Dataview details` provide a `Name` for your dataview that is unique to your kdb environment
 2. Choose an Availability Zone. This must match the Availability Zone your kdb scaling group runs on
 
 <p style="text-align: center">
-    <img src="workshop/graphics/Create_dataview_pt1.png" alt="Dataview Settings 1" width="90%"/>
+    <img src="../workshop/graphics/Create_dataview_pt1.png" alt="Dataview Settings 1" width="90%"/>
 </p>
 
 1. Under `Changeset update settings` you have the option of choosing two modes:
@@ -86,7 +86,7 @@ To learn more about changesets click [this link](https://docs.aws.amazon.com/fin
 2. Under `Segment configuration - optional` choose the root path for your `Database path` and the `Volume` you created in the prior step
 
 <p style="text-align: center">
-    <img src="workshop/graphics/Create_dataview_pt2.png" alt="Dataview Settings 2" width="90%"/>
+    <img src="../workshop/graphics/Create_dataview_pt2.png" alt="Dataview Settings 2" width="90%"/>
 </p>
 
 Click `Create dataview` when you are happy with the settings
