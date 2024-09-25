@@ -835,23 +835,23 @@
 <h2 id="create-a-user-if-manually-set-up-not-useing-terraform">Create a user (If manually set up (not useing Terraform))</h2>
 <p>In your kdb environment, go to the <code>Users</code> tab and select <code>Add user</code>.</p>
 <p style="text-align: center">
-    <img src="workshop/graphics/create_user_button.png" alt="Create user button" width="90%"/>
+    <img src="../workshop/graphics/create_user_button.png" alt="Create user button" width="90%"/>
 </p>
 
 <p>Give it a name and select the <code>IAM role</code> you created above.</p>
 <p style="text-align: center">
-    <img src="workshop/graphics/create_user.png" alt="Add user" width="90%"/>
+    <img src="../workshop/graphics/create_user.png" alt="Add user" width="90%"/>
 </p>
 
 <h2 id="generate-connection-string">Generate Connection String</h2>
 <p>On the <code>Users</code> tab, copy the links for <code>IAM role</code> and <code>User ARN</code> for the user.</p>
 <p style="text-align: center">
-    <img src="workshop/graphics/user_details.png" alt="User details" width="90%"/>
+    <img src="../workshop/graphics/user_details.png" alt="User details" width="90%"/>
 </p>
 
 <p>Navigate to <code>CloudShell</code>.</p>
 <p style="text-align: center">
-    <img src="workshop/graphics/cloudshell.png" alt="Navigate to CloudShell" width="90%"/>
+    <img src="../workshop/graphics/cloudshell.png" alt="Navigate to CloudShell" width="90%"/>
 </p>
 
 <p>Replace <code>&lt;ARN_COPIED_FROM_ABOVE&gt;</code> with the <code>IAM Role</code> copied above and run the following (this will not return anything):</p>
@@ -865,7 +865,7 @@ $(aws sts assume-role \
 <p>This lets you assume the role that you have just created by taking the values returned from the <code>aws sts assume-role</code> command and setting them in your <code>AWS_ACCESS_KEY_ID</code>, e.t.c. environment variables. NOTE - if you need to switch back to your own user within the CloudShell, you will need to run <code>unset AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY AWS_SESSION_TOKEN</code> to unset these environment variables.</p>
 <p>Copy your kdb Environment ID:</p>
 <p style="text-align: center">
-    <img src="workshop/graphics/kdbenv_id.png" alt="Get you kdb env ID" width="90%"/>
+    <img src="../workshop/graphics/kdbenv_id.png" alt="Get you kdb env ID" width="90%"/>
 </p>
 
 <p>Replace <code>&lt;YOUR_KDB_ENVIRONMENT_ID&gt;</code> with your kdb environment ID, <code>&lt;USER_ARN_COPIED_ABOVE&gt;</code> with the <code>User ARN</code>, and <code>&lt;NAME_OF_CLUSTER&gt;</code> with the name of the cluster you want to connect to. Run the following:</p>
@@ -873,7 +873,7 @@ $(aws sts assume-role \
 </code></pre>
 <p>This will return a large connection string which can be used to connect to your cluster.</p>
 <p style="text-align: center">
-    <img src="workshop/graphics/connection_string.png" alt="Connection string example" width="90%"/>
+    <img src="../workshop/graphics/connection_string.png" alt="Connection string example" width="90%"/>
 </p>
 
 

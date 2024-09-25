@@ -764,12 +764,12 @@
 <h2 id="create-a-windows-ec2-instance">Create a Windows EC2 Instance</h2>
 <p>Navigate to the EC2 service.</p>
 <p style="text-align: center">
-    <img src="workshop/graphics/navigate_ec2.png" alt="Navigate to the EC2 service" width="90%"/>
+    <img src="../workshop/graphics/navigate_ec2.png" alt="Navigate to the EC2 service" width="90%"/>
 </p>
 
 <p>Select <code>Launch instance</code> to create a new EC2 instance.</p>
 <p style="text-align: center">
-    <img src="workshop/graphics/ec2_launch.png" alt="Select launch instance" width="90%"/>
+    <img src="../workshop/graphics/ec2_launch.png" alt="Select launch instance" width="90%"/>
 </p>
 
 <p>Most options here can be left as their defaults. Here are the ones that need selected/changing:</p>
@@ -777,88 +777,88 @@
 <li>
 <p>Select "Windows" from the <code>Quick Start</code> options.</p>
 <p><p style="text-align: center">
-    <img src="workshop/graphics/ec2_application.png" alt="Select windows quick start" width="90%"/>
+    <img src="../workshop/graphics/ec2_application.png" alt="Select windows quick start" width="90%"/>
 </p></p>
 </li>
 <li>
 <p>We need to create a new key pair: Select <code>Create new key pair</code>.</p>
 <p><p style="text-align: center">
-    <img src="workshop/graphics/ec2_keypair_button.png" alt="Select create new key pair" width="90%"/>
+    <img src="../workshop/graphics/ec2_keypair_button.png" alt="Select create new key pair" width="90%"/>
 </p></p>
 </li>
 <li>
 <p>Enter a name for your key pair, leave the key pair type as <code>RSA</code> and the file format as <code>.pem</code>. This will download a key file to you PC which you will use to connect to the instance.</p>
 <p><p style="text-align: center">
-    <img src="workshop/graphics/create_key_pair.png" alt="Create new key pair" width="90%"/>
+    <img src="../workshop/graphics/create_key_pair.png" alt="Create new key pair" width="90%"/>
 </p></p>
 </li>
 </ol>
 <p>The network should be in the same VPC as your cluster. Select <code>Create security group</code> that allows Remote Desktop Protocol (RDP) connections from anywhere.
     - This is only for the purposes of the MVP. For customising see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/working-with-security-groups.html">this page</a> on security groups.</p>
 <p style="text-align: center">
-    <img src="workshop/graphics/ec2_network.png" alt="EC2 network" width="90%"/>
+    <img src="../workshop/graphics/ec2_network.png" alt="EC2 network" width="90%"/>
 </p>
 
 <h2 id="adding-your-new-security-group-to-you-ec2">Adding your new security group to you EC2</h2>
 <p>Now we need to add the security group of your cluster to your EC2.</p>
 <p>Navigate to EC2 service.</p>
 <p style="text-align: center">
-    <img src="workshop/graphics/ec2_navigate.png" alt="Navigate to EC2" width="90%"/>
+    <img src="../workshop/graphics/ec2_navigate.png" alt="Navigate to EC2" width="90%"/>
 </p>
 
 <p>Select <code>Instances (running)</code>.</p>
 <p style="text-align: center">
-    <img src="workshop/graphics/ec2_navigate2.png" alt="Select Instance running" width="90%"/>
+    <img src="../workshop/graphics/ec2_navigate2.png" alt="Select Instance running" width="90%"/>
 </p>
 
 <p>Open your EC2 Instance.</p>
 <p style="text-align: center">
-    <img src="workshop/graphics/EC2_connect1.png" alt="Open EC2 instance" width="90%"/>
+    <img src="../workshop/graphics/EC2_connect1.png" alt="Open EC2 instance" width="90%"/>
 </p>
 
 <p>Select <code>Actions</code> -&gt; <code>Security</code> -&gt; <code>Change security groups</code>.</p>
 <p style="text-align: center">
-    <img src="workshop/graphics/ec2_add_security.png" alt="Select change security groups" width="90%"/>
+    <img src="../workshop/graphics/ec2_add_security.png" alt="Select change security groups" width="90%"/>
 </p>
 
 <p>Search and select the security group that is on your clusters, select <code>Add security group</code> then <code>Save</code>.</p>
 <p style="text-align: center">
-    <img src="workshop/graphics/ec2_add_security2.png" alt="Add security group" width="90%"/>
+    <img src="../workshop/graphics/ec2_add_security2.png" alt="Add security group" width="90%"/>
 </p>
 
 <p>You should now have two security groups, one from the launch wizard, and the one you added manually that is also attached to your clusters.</p>
 <p style="text-align: center">
-    <img src="workshop/graphics/ec2_security.png" alt="Security group example" width="90%"/>
+    <img src="../workshop/graphics/ec2_security.png" alt="Security group example" width="90%"/>
 </p>
 
 <h2 id="connecting-to-your-ec2-instance">Connecting to your EC2 Instance</h2>
 <p>Open your EC2 Instance.</p>
 <p style="text-align: center">
-    <img src="workshop/graphics/EC2_connect1.png" alt="Open EC2 instance" width="90%"/>
+    <img src="../workshop/graphics/EC2_connect1.png" alt="Open EC2 instance" width="90%"/>
 </p>
 
 <p>Select <code>Connect</code>.</p>
 <p style="text-align: center">
-    <img src="workshop/graphics/EC2_connect2.png" alt="Select connect" width="90%"/>
+    <img src="../workshop/graphics/EC2_connect2.png" alt="Select connect" width="90%"/>
 </p>
 
 <h3 id="get-your-password">Get your password</h3>
 <p>This only needs to be done once. Once you have this password you can skip this step.</p>
 <p>Select <code>Get password</code>.</p>
 <p style="text-align: center">
-    <img src="workshop/graphics/EC2_connect3.png" alt="Get password" width="90%"/>
+    <img src="../workshop/graphics/EC2_connect3.png" alt="Get password" width="90%"/>
 </p>
 
 <p>Upload the <code>.pem</code> that was saved to you PC earlier (alternativly you can just paste the contents of this file in the text box).</p>
 <p style="text-align: center">
-    <img src="workshop/graphics/EC2_connect4.png" alt="Upload .pem file" width="90%"/>
+    <img src="../workshop/graphics/EC2_connect4.png" alt="Upload .pem file" width="90%"/>
 </p>
 
 <p>This will return the value of your password. Keep a note of this password as you will need it to connect your EC2.</p>
 <h3 id="connect">Connect</h3>
 <p>Download the remote desktop file.</p>
 <p style="text-align: center">
-    <img src="workshop/graphics/EC2_connect5.png" alt="Dowload remote desktop file" width="90%"/>
+    <img src="../workshop/graphics/EC2_connect5.png" alt="Dowload remote desktop file" width="90%"/>
 </p>
 
 <p>Run this file and enter the password you recieved above when promted. You should now be connected to the Windows remote desktop.</p>

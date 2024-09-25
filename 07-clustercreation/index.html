@@ -825,12 +825,12 @@
 <hr />
 <p>To create a cluster, first select your kdb environment:</p>
 <p style="text-align: center">
-    <img src="workshop/graphics/kdbenv.png" alt="Select kdb env" width="90%"/>
+    <img src="../workshop/graphics/kdbenv.png" alt="Select kdb env" width="90%"/>
 </p>
 
 <p>Then select the <code>Clusters</code> tab, then either of the <code>Create cluster</code> buttons:</p>
 <p style="text-align: center">
-    <img src="workshop/graphics/create-cluster.png" alt="Create Cluster Button" width="90%"/>
+    <img src="../workshop/graphics/create-cluster.png" alt="Create Cluster Button" width="90%"/>
 </p>
 
 <h2 id="prerequisites">Prerequisites</h2>
@@ -856,25 +856,25 @@
 <li>
 <p>Select the execution role for the <a href="https://catalog.us-east-1.prod.workshops.aws/workshops/a1575309-1f43-4945-a5fa-a4d62d5e821d/en-US/rolesetup">IAM user previously created</a>. The user for all 6 clusters should be the same. This is so that each cluster has the correct permissions.</p>
 <p><p style="text-align: center">
-    <img src="workshop/graphics/discovery_cluster_details.png" alt="Discovery Cluster Details" width="90%"/>
+    <img src="../workshop/graphics/discovery_cluster_details.png" alt="Discovery Cluster Details" width="90%"/>
 </p></p>
 </li>
 <li>
 <p>Select <code>Run on kdb scaling group</code> for the Cluster running option.</p>
 <p><p style="text-align: center">
-    <img src="workshop/graphics/discovery_cluster_running.png" alt="Discovery Cluster Running" width="90%"/>
+    <img src="../workshop/graphics/discovery_cluster_running.png" alt="Discovery Cluster Running" width="90%"/>
 </p></p>
 </li>
 <li>
 <p>Choose your group in the dropdown in the <code>Kdb scaling group details</code> section.</p>
 <p><p style="text-align: center">
-    <img src="workshop/graphics/kdb_scaling_group_details.png" alt="Kdb Scaling Group Details" width="90%"/>
+    <img src="../workshop/graphics/kdb_scaling_group_details.png" alt="Kdb Scaling Group Details" width="90%"/>
 </p></p>
 </li>
 <li>
 <p>In the <code>Node details</code> section, set the <code>Memory reservation per node</code> to the minimum allowed (6 MiB) and leave the rest blank.</p>
 <p><p style="text-align: center">
-    <img src="workshop/graphics/discovery_memory_reservation.png" alt="Discovery Memory Reservation" width="90%"/>
+    <img src="../workshop/graphics/discovery_memory_reservation.png" alt="Discovery Memory Reservation" width="90%"/>
 </p></p>
 </li>
 <li>
@@ -886,10 +886,10 @@
 <li>Alternatively, you can copy the URL from the codebucket itself.</li>
 </ul>
 <p><p style="text-align: center">
-    <img src="workshop/graphics/S3_bucket1.png" alt="Select your code bucket" width="90%"/>
+    <img src="../workshop/graphics/S3_bucket1.png" alt="Select your code bucket" width="90%"/>
 </p></p>
 <p><p style="text-align: center">
-    <img src="workshop/graphics/S3_bucket2.png" alt="Select your code file" width="90%"/>
+    <img src="../workshop/graphics/S3_bucket2.png" alt="Select your code file" width="90%"/>
 </p></p>
 </li>
 <li>
@@ -917,7 +917,7 @@
 </table>
 <p>This specified initialization script and the command line arguments will set up the necessary environment for your cluster.</p>
 <p><p style="text-align: center">
-    <img src="workshop/graphics/discovery_add_code.png" alt="Discovery Add Code" width="90%"/>
+    <img src="../workshop/graphics/discovery_add_code.png" alt="Discovery Add Code" width="90%"/>
 </p></p>
 </li>
 <li>
@@ -926,13 +926,13 @@
 <li>
 <p>Select your previously created <a href="https://docs.aws.amazon.com/vpc/latest/userguide/create-vpc.html">VPC ID</a>, <a href="https://docs.aws.amazon.com/vpc/latest/userguide/create-subnets.html">Subnets</a>, and Security Groups (we can use the readily available default), then select <code>Next</code> to go to the next page.</p>
 <p><p style="text-align: center">
-    <img src="workshop/graphics/discovery_vpc.png" alt="Discovery VPC Settings" width="90%"/>
+    <img src="../workshop/graphics/discovery_vpc.png" alt="Discovery VPC Settings" width="90%"/>
 </p></p>
 </li>
 <li>
 <p>Leave everything as blank and click <code>Next</code> to move on to the next page.</p>
 <p><p style="text-align: center">
-    <img src="workshop/graphics/discovery_config_options.png" alt="Discovery Config Options" width="90%"/>
+    <img src="../workshop/graphics/discovery_config_options.png" alt="Discovery Config Options" width="90%"/>
 </p>
 14. Check the entered information in the review page, then select <code>Create cluster</code>.</p>
 </li>
@@ -948,7 +948,7 @@
 <li><strong>Note:</strong> This name must match your process name, <code>procname</code>, added during the next stage of cluster creation - This is due to process connections requiring the cluster name, which is not visible from within the process, but procname is. <strong>Our suggestion is to use the process type</strong> (<code>proctype</code>) <strong>with a number</strong> e.g. <code>tp1</code>.</li>
 </ul>
 <p><p style="text-align: center">
-    <img src="workshop/graphics/tp_cluster_details.png" alt="TP Cluster Details" width="90%"/>
+    <img src="../workshop/graphics/tp_cluster_details.png" alt="TP Cluster Details" width="90%"/>
 </p></p>
 </li>
 <li>
@@ -957,13 +957,13 @@
 <li>
 <p>Select <code>Run on kdb scaling group</code> for the Cluster running option.</p>
 <p><p style="text-align: center">
-    <img src="workshop/graphics/discovery_cluster_running.png" alt="TP Cluster Running" width="90%"/>
+    <img src="../workshop/graphics/discovery_cluster_running.png" alt="TP Cluster Running" width="90%"/>
 </p></p>
 </li>
 <li>
 <p>Choose your group in the dropdown in the <code>Kdb scaling group details</code> section.</p>
 <p><p style="text-align: center">
-    <img src="workshop/graphics/kdb_scaling_group_details.png" alt="Kdb Scaling Group Details" width="90%"/>
+    <img src="../workshop/graphics/kdb_scaling_group_details.png" alt="Kdb Scaling Group Details" width="90%"/>
 </p></p>
 </li>
 <li>
@@ -975,7 +975,7 @@
 <li>
 <p>Leave Tags as empty and select <code>Next</code> to go to the next page.</p>
 <p><p style="text-align: center">
-    <img src="workshop/graphics/rdb_node_details.png" alt="TP Node Details" width="90%"/>
+    <img src="../workshop/graphics/rdb_node_details.png" alt="TP Node Details" width="90%"/>
 </p></p>
 </li>
 <li>
@@ -1009,7 +1009,7 @@
 </table>
 <p>This specified initialization script and the command line arguments will set up the necessary environment for your cluster.</p>
 <p><p style="text-align: center">
-    <img src="workshop/graphics/tp_add_code.png" alt="TP Add Code" width="90%"/>
+    <img src="../workshop/graphics/tp_add_code.png" alt="TP Add Code" width="90%"/>
 </p></p>
 </li>
 <li>
@@ -1021,7 +1021,7 @@
 <li>
 <p>Select your volume, then select <code>Next</code> to go to the next page.</p>
 <p><p style="text-align: center">
-    <img src="workshop/graphics/tp_log.png" alt="Add volume" width="90%"/>
+    <img src="../workshop/graphics/tp_log.png" alt="Add volume" width="90%"/>
 </p></p>
 </li>
 <li>
@@ -1039,7 +1039,7 @@
 <li><strong>Note:</strong> This name must match your process name, <code>procname</code>, added during the next stage of cluster creation - This is due to process connections requiring the cluster name, which is not visible from within the process, but procname is. <strong>Our suggestion is to use the process type</strong> (<code>proctype</code>) <strong>with a number</strong> e.g. <code>rdb1</code>.</li>
 </ul>
 <p><p style="text-align: center">
-    <img src="workshop/graphics/rdb_cluster_details.png" alt="RDB Cluster Details" width="90%"/>
+    <img src="../workshop/graphics/rdb_cluster_details.png" alt="RDB Cluster Details" width="90%"/>
 </p></p>
 </li>
 <li>
@@ -1048,13 +1048,13 @@
 <li>
 <p>Select <code>Run on kdb scaling group</code> for the Cluster running option.</p>
 <p><p style="text-align: center">
-    <img src="workshop/graphics/discovery_cluster_running.png" alt="RDB Cluster Running" width="90%"/>
+    <img src="../workshop/graphics/discovery_cluster_running.png" alt="RDB Cluster Running" width="90%"/>
 </p></p>
 </li>
 <li>
 <p>Choose your group in the dropdown in the <code>Kdb scaling group details</code> section.</p>
 <p><p style="text-align: center">
-    <img src="workshop/graphics/kdb_scaling_group_details.png" alt="Kdb Scaling Group Details" width="90%"/>
+    <img src="../workshop/graphics/kdb_scaling_group_details.png" alt="Kdb Scaling Group Details" width="90%"/>
 </p></p>
 </li>
 <li>
@@ -1066,7 +1066,7 @@
 <li>
 <p>Leave Tags as empty and select <code>Next</code> to go to the next page.</p>
 <p><p style="text-align: center">
-    <img src="workshop/graphics/rdb_node_details.png" alt="RDB Node Details" width="90%"/>
+    <img src="../workshop/graphics/rdb_node_details.png" alt="RDB Node Details" width="90%"/>
 </p></p>
 </li>
 <li>
@@ -1100,7 +1100,7 @@
 </table>
 <p>This specified initialization script and the command line arguments will set up the necessary environment for your cluster.</p>
 <p><p style="text-align: center">
-    <img src="workshop/graphics/rdb_add_code.png" alt="RDB Add Code" width="90%"/>
+    <img src="../workshop/graphics/rdb_add_code.png" alt="RDB Add Code" width="90%"/>
 </p></p>
 </li>
 <li>
@@ -1124,7 +1124,7 @@
 <li>
 <p>Select <code>Next</code> to go to the next page.</p>
 <p><p style="text-align: center">
-    <img src="workshop/graphics/rdb_config_options.png" alt="RDB Config Options" width="90%"/>
+    <img src="../workshop/graphics/rdb_config_options.png" alt="RDB Config Options" width="90%"/>
 </p></p>
 </li>
 <li>
@@ -1142,7 +1142,7 @@
 <li><strong>Note:</strong> This name must match your process name, <code>procname</code>, added during the next stage of cluster creation - This is due to process connections requiring the cluster name, which is not visible from within the process, but procname is. <strong>Our suggestion is to use the process type</strong> (<code>proctype</code>) <strong>with a number</strong> e.g. <code>hdb1</code>.</li>
 </ul>
 <p><p style="text-align: center">
-    <img src="workshop/graphics/hdb_cluster_details.png" alt="HDB Cluster Details" width="90%"/>
+    <img src="../workshop/graphics/hdb_cluster_details.png" alt="HDB Cluster Details" width="90%"/>
 </p></p>
 </li>
 <li>
@@ -1151,13 +1151,13 @@
 <li>
 <p>Select <code>Run on kdb scaling group</code> for the Cluster running option.</p>
 <p><p style="text-align: center">
-    <img src="workshop/graphics/discovery_cluster_running.png" alt="HDB Cluster Running" width="90%"/>
+    <img src="../workshop/graphics/discovery_cluster_running.png" alt="HDB Cluster Running" width="90%"/>
 </p></p>
 </li>
 <li>
 <p>Choose your group in the dropdown in the <code>Kdb scaling group details</code> section.</p>
 <p><p style="text-align: center">
-    <img src="workshop/graphics/kdb_scaling_group_details.png" alt="Kdb Scaling Group Details" width="90%"/>
+    <img src="../workshop/graphics/kdb_scaling_group_details.png" alt="Kdb Scaling Group Details" width="90%"/>
 </p></p>
 </li>
 <li>
@@ -1169,7 +1169,7 @@
 <li>
 <p>Leave Tags as empty and select <code>Next</code> to go to the next page.</p>
 <p><p style="text-align: center">
-    <img src="workshop/graphics/rdb_node_details.png" alt="HDB Node Details" width="90%"/>
+    <img src="../workshop/graphics/rdb_node_details.png" alt="HDB Node Details" width="90%"/>
 </p></p>
 </li>
 <li>
@@ -1203,7 +1203,7 @@
 </table>
 <p>This specified initialization script and the command line arguments will set up the necessary environment for your cluster.</p>
 <p><p style="text-align: center">
-    <img src="workshop/graphics/hdb_add_code.png" alt="HDB Add Code" width="90%"/>
+    <img src="../workshop/graphics/hdb_add_code.png" alt="HDB Add Code" width="90%"/>
 </p></p>
 </li>
 <li>
@@ -1223,7 +1223,7 @@
 </li>
 </ol>
 <p style="text-align: center">
-    <img src="workshop/graphics/hdb_config_options.png" alt="HDB Config Options" width="90%"/>
+    <img src="../workshop/graphics/hdb_config_options.png" alt="HDB Config Options" width="90%"/>
 </p>
 
 <ol>
@@ -1241,7 +1241,7 @@
 <li><strong>Note:</strong> This name must match your process name, <code>procname</code>, added during the next stage of cluster creation - This is due to process connections requiring the cluster name, which is not visible from within the process, but procname is. <strong>Our suggestion is to use the process type</strong> (<code>proctype</code>) <strong>with a number</strong> e.g. <code>gateway1</code>.</li>
 </ul>
 <p><p style="text-align: center">
-    <img src="workshop/graphics/gw_cluster_details.png" alt="Gateway Cluster Details" width="90%"/>
+    <img src="../workshop/graphics/gw_cluster_details.png" alt="Gateway Cluster Details" width="90%"/>
 </p></p>
 </li>
 <li>
@@ -1250,13 +1250,13 @@
 <li>
 <p>Select <code>Run on kdb scaling group</code> for the Cluster running option.</p>
 <p><p style="text-align: center">
-    <img src="workshop/graphics/discovery_cluster_running.png" alt="Gateway Cluster Running" width="90%"/>
+    <img src="../workshop/graphics/discovery_cluster_running.png" alt="Gateway Cluster Running" width="90%"/>
 </p></p>
 </li>
 <li>
 <p>Choose your group in the dropdown in the <code>Kdb scaling group details</code> section.</p>
 <p><p style="text-align: center">
-    <img src="workshop/graphics/kdb_scaling_group_details.png" alt="Kdb Scaling Group Details" width="90%"/>
+    <img src="../workshop/graphics/kdb_scaling_group_details.png" alt="Kdb Scaling Group Details" width="90%"/>
 </p></p>
 </li>
 <li>
@@ -1268,7 +1268,7 @@
 <li>
 <p>Leave Tags as empty and select <code>Next</code> to go to the next page.</p>
 <p><p style="text-align: center">
-    <img src="workshop/graphics/rdb_node_details.png" alt="Gateway Node Details" width="90%"/>
+    <img src="../workshop/graphics/rdb_node_details.png" alt="Gateway Node Details" width="90%"/>
 </p></p>
 </li>
 <li>
@@ -1302,7 +1302,7 @@
 </table>
 <p>This specified initialization script and the command line arguments will set up the necessary environment for your cluster.</p>
 <p><p style="text-align: center">
-    <img src="workshop/graphics/gw_add_code.png" alt="Gateway Add Code" width="90%"/>
+    <img src="../workshop/graphics/gw_add_code.png" alt="Gateway Add Code" width="90%"/>
 </p></p>
 </li>
 <li>
@@ -1327,7 +1327,7 @@
 <li>
 <p>Choose a name for your cluster. As this is a sample feed and not a "production" intended process, please name it <code>feed1</code>.</p>
 <p><p style="text-align: center">
-    <img src="workshop/graphics/feed_cluster_details.png" alt="Feed Cluster Details" width="90%"/>
+    <img src="../workshop/graphics/feed_cluster_details.png" alt="Feed Cluster Details" width="90%"/>
 </p></p>
 </li>
 <li>
@@ -1336,19 +1336,19 @@
 <li>
 <p>Select <code>Run on kdb scaling group</code> for the Cluster running option.</p>
 <p><p style="text-align: center">
-    <img src="workshop/graphics/discovery_cluster_running.png" alt="Feed Cluster Running" width="90%"/>
+    <img src="../workshop/graphics/discovery_cluster_running.png" alt="Feed Cluster Running" width="90%"/>
 </p></p>
 </li>
 <li>
 <p>Choose your group in the dropdown in the <code>Kdb scaling group details</code> section.</p>
 <p><p style="text-align: center">
-    <img src="workshop/graphics/kdb_scaling_group_details.png" alt="Kdb Scaling Group Details" width="90%"/>
+    <img src="../workshop/graphics/kdb_scaling_group_details.png" alt="Kdb Scaling Group Details" width="90%"/>
 </p></p>
 </li>
 <li>
 <p>In the <code>Node details</code> section, set the <code>Memory reservation per node</code> to the minimum allowed (6 MiB) and leave the rest blank.</p>
 <p><p style="text-align: center">
-    <img src="workshop/graphics/discovery_memory_reservation.png" alt="Feed Memory Reservation" width="90%"/>
+    <img src="../workshop/graphics/discovery_memory_reservation.png" alt="Feed Memory Reservation" width="90%"/>
 </p></p>
 </li>
 <li>
@@ -1385,7 +1385,7 @@
 </table>
 <p>This specified initialization script and the command line arguments will set up the necessary environment for your cluster.</p>
 <p><p style="text-align: center">
-    <img src="workshop/graphics/feed_add_code.png" alt="Feed Add Code" width="90%"/>
+    <img src="../workshop/graphics/feed_add_code.png" alt="Feed Add Code" width="90%"/>
 </p></p>
 </li>
 <li>
@@ -1397,7 +1397,7 @@
 <li>
 <p>Leave everything as blank and click <code>Next</code> to move on to the next page.</p>
 <p><p style="text-align: center">
-    <img src="workshop/graphics/discovery_config_options.png" alt="Feed Config Options" width="90%"/>
+    <img src="../workshop/graphics/discovery_config_options.png" alt="Feed Config Options" width="90%"/>
 </p></p>
 </li>
 <li>
@@ -1413,7 +1413,7 @@
 <h2 id="errors-in-cluster-creation">Errors in cluster creation</h2>
 <p>On cluster creation, most errors will result in your cluster going to a <code>Create failed</code> state.</p>
 <p style="text-align: center">
-    <img src="workshop/graphics/cluster_failure.png" alt="Cluster failure" width="90%"/>
+    <img src="../workshop/graphics/cluster_failure.png" alt="Cluster failure" width="90%"/>
 </p>
 
 <p>If that is the case you should:</p>
@@ -1421,7 +1421,7 @@
 <li>
 <p>Click the cluster name in the <code>Clusters</code> section of your environment.</p>
 <p><p style="text-align: center">
-    <img src="workshop/graphics/cluster_select.png" alt="Select Cluster" width="90%"/>
+    <img src="../workshop/graphics/cluster_select.png" alt="Select Cluster" width="90%"/>
 </p></p>
 </li>
 <li>
@@ -1430,7 +1430,7 @@
 <li>
 <p>If you click the LogStream for an individual log it will take you to AWS CloudWatch where you can filter the messages for keywords or for messages in a certain time window.</p>
 <p><p style="text-align: center">
-    <img src="workshop/graphics/cluster_logs.png" alt="Select Cluster Logs" width="90%"/>
+    <img src="../workshop/graphics/cluster_logs.png" alt="Select Cluster Logs" width="90%"/>
 </p></p>
 </li>
 </ul>
